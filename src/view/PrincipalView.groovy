@@ -14,20 +14,23 @@ import model.*
  *
  * @author a1602632
  */
+def teste = {
+    saude.setText("teste")
+}
 
 count = 0
 l = Estado.DOENTE
 new SwingBuilder().edt {
-  frame(title: 'Frame', size: [550, 500], show: true) {
+    frame(title: 'Frame', size: [550, 500], show: true) {
     borderLayout()
   
     panel(constraints: BorderLayout.NORTH) {
         label(text: 'Saude')
-        saude = textField(id: 'textSaude', text: '0', editable: false)
+        saude = textField(id: 'textSaude', text: '0', editable: false, columns:10)
         label(text: 'Fome')
-        fome = textField(id: 'textFome', text: '0', editable: false)
+        fome = textField(id: 'textFome', text: '0', editable: false, columns:10)
         label(text: 'Feicidade')
-        felicidade = textField(id: 'textFeicidade', text: '0', editable: false)
+        felicidade = textField(id: 'textFeicidade', text: '0', editable: false, columns:10)
        
     }
     panel(constraints: BorderLayout.CENTER) {
@@ -37,19 +40,19 @@ new SwingBuilder().edt {
         
     panel(constraints: BorderLayout.SOUTH) {
         button text: 'Brincar', actionPerformed: {
-            println address
+            teste()
         }
         button text: 'Banhar', actionPerformed: {
-            println address
+            teste()
         }
         button text: 'Alimentar', actionPerformed: {
-            println address
+            teste()
         }
         button text: 'Levar ao Médico', actionPerformed: {
-            println address
+            teste()
         }
         button text: 'Botar Para Dormir', actionPerformed: {
-            println address
+            teste()
         }
     }
   }
