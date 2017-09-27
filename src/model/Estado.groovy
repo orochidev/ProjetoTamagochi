@@ -11,6 +11,15 @@ package model
  * @author a1602632
  */
 enum Estado {
-    DOENTE, CANSADO, SUJO, TRISTE, MORTO;
+    NORMAL, DOENTE, CANSADO, SUJO, TRISTE, MORTO;
+    private String motivo;
+    public Estado(motivo){
+        this.motivo = motivo
+    }
+    public Estado(){}
+    
+    public getMotivo(){
+        this.motivo
+    }
 }
 
