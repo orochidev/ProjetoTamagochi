@@ -8,7 +8,7 @@ package view
 	
 
 import groovy.swing.SwingBuilder
-import java.awt.BorderLayout as BL
+import java.awt.BorderLayout
 import model.*
 /**
  *
@@ -18,11 +18,40 @@ import model.*
 count = 0
 l = Estado.DOENTE
 new SwingBuilder().edt {
-  frame(title: 'Frame', size: [300, 300], show: true) {
+  frame(title: 'Frame', size: [550, 500], show: true) {
     borderLayout()
-    textlabel = label(text: 'Click the button!', constraints: BL.NORTH)
-    button(text:'Click Me',
-         actionPerformed: {count++; textlabel.text = "Clicked ${count} time(s)."; println "clicked"}, constraints:BL.SOUTH)
+  
+    panel(constraints: BorderLayout.NORTH) {
+        label(text: 'Saude')
+        saude = textField(id: 'textSaude', text: '0', editable: false)
+        label(text: 'Fome')
+        fome = textField(id: 'textFome', text: '0', editable: false)
+        label(text: 'Feicidade')
+        felicidade = textField(id: 'textFeicidade', text: '0', editable: false)
+       
+    }
+    panel(constraints: BorderLayout.CENTER) {
+              
+       
+    }   
+        
+    panel(constraints: BorderLayout.SOUTH) {
+        button text: 'Brincar', actionPerformed: {
+            println address
+        }
+        button text: 'Banhar', actionPerformed: {
+            println address
+        }
+        button text: 'Alimentar', actionPerformed: {
+            println address
+        }
+        button text: 'Levar ao Médico', actionPerformed: {
+            println address
+        }
+        button text: 'Botar Para Dormir', actionPerformed: {
+            println address
+        }
+    }
   }
 }
 
