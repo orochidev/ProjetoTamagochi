@@ -14,6 +14,14 @@ import view.View
  */
 abstract class Controller<T extends View> {
     private T view;
+    private flashMessage;
+    
+    def getFlash(){
+        return flashMessage;
+    }
+    def setFlash(message){
+        flashMessage = messages
+    }
     public Controller(T view){
         this.view = view
     }

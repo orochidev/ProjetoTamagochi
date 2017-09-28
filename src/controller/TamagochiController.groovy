@@ -10,25 +10,27 @@ package controller
  *
  * @author Orochi
  */
+import model.Callback
 import model.Tamagochi
 class TamagochiController extends Controller{
 	private Tamagochi tamagochi
         
-        def alimentar(){
-            
+        def alimentar(Callback r = null){
+            r?.onResult()
         }
         
-        def dormir(){
-            
+        def dormir(Callback r = null){
+            r?.onResult()
+
         }
-        def brincar(){
-            
+        def brincar(Callback r = null){
+            r?.onResult()
         }
-        def curar(){
-            
+        def curar(Callback r = null){
+             r?.onResult()           
         }
         
-        def banho(){
+        def banho(Callback r){
             
         }
 }
