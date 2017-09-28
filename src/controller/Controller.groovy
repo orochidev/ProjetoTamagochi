@@ -12,7 +12,7 @@ import view.View
  *
  * @author Orochi
  */
-class Controller<T extends View> {
+abstract class Controller<T extends View> {
     private T view;
     public Controller(T view){
         this.view = view

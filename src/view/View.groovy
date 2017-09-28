@@ -12,11 +12,9 @@ import controller.Controller
  *
  * @author Orochi
  */
-class View<T extends Controller>{
+abstract class View<T extends Controller>{
     private T controller;
-    def refresh(){
-        
-    }
+    abstract def refresh();
     
     def getController(){
         return controller;
