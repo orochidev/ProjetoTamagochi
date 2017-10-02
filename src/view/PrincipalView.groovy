@@ -34,8 +34,8 @@ new SwingBuilder().edt {
        
     }
     panel(constraints: BorderLayout.CENTER) {
-              
-       
+        //imagens de estados aqui.
+        label(text: "imagens de estados aqui.")
     }   
         
     panel(constraints: BorderLayout.SOUTH) {
